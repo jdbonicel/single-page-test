@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>My text chat</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+	<script src="https://code.angularjs.org/1.4.5/angular-route.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.13.4/ui-bootstrap.min.js"></script>
+	<script type="text/javascript" src="app/app.js"></script>
+	<script type="text/javascript" src="controller/controller.js"></script>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+	<link rel="stylesheet" href="dist/css/app.css">
+
+	
+</head>
+<body ng-app="app">
+	<div class="container-fluid">
+
+		
+		<div class="row">
+			<div class="col-md-1"></div>
+			<div class="col-md-10">
+				<!-- Start NAV -->
+				<nav class="navbar navbar-inverse"  ng-controller="navController">
+					<div class="container-fluid">
+						
+						<ul class="nav navbar-nav">
+							<li class="{{item.class}}" ng-repeat="item in nav" ng-click="setActive(item, nav)" ng-class="{active: item.active}">
+								<a href="{{ item.link }}" >{{ item.title }}</a>
+							</li>
+						</ul>
+					</div>
+				</nav>
+				<!-- End NAV -->
+			</div>
+			<div class="col-md-1"></div>
+		</div>
+
+		<div ng-view class="container-fluid">
+			
+		</div>
+	
+	</div>
+</body>
+</html>

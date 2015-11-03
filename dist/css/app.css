@@ -1,0 +1,14 @@
+body {
+  background: #eee;
+}
+.button-inner {
+  text-align: center;
+}
+#channel-title {
+  text-align: center;
+}
+#chat-historic {
+  background: #fff;
+  border: 1px solid #eee;
+  height: 300px;
+}
