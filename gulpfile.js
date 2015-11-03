@@ -4,7 +4,7 @@ var gulp = require('gulp'),
  
 gulp.task('connect', function() {
 	connect.server({
-	    root: '/Users/JD/Documents/JD/project/tchat/',
+	    root: './',
 	    livereload: true,
 	    port: 8888
 	});
@@ -26,5 +26,7 @@ gulp.task('watch', function () {
 	gulp.watch(['src/view/*.html'], ['html']);
 	gulp.watch(['src/less/*.less'], ['less']);
 });
+
+
 
 gulp.task('default', ['connect','less', 'html', 'watch']);
