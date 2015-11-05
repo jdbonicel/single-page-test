@@ -1,5 +1,5 @@
 # single-page-test
 
- npm install --save gulp-install`
+ npm install --save gulp-install
  start gulp
- go to localhost:8888
+ localhost:8888
